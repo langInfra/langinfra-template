@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "langinfra-template"
+version = "0.1.0"
+description = "Support Classes and Functions for PubNub interaction and other utilities"
+authors = ["Md Sulaiman <dev.sulaiman@icloud.com>"]
+readme = "README.md"
+packages = [{ include = "langinfra_template", from = "src/" }]
+[tool.poetry.scripts]
+langinfra = "langinfra_template.main:main"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+langinfra = "*"
+python-dotenv = "*"
+orjson = "3.9.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+ipykernel = "^6.24.0"
+rich = { template = ["jupyter"], version = "^13.4.2" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
